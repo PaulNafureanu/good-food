@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Grandhotel";
+  src: url("./../fonts/grandhotel-regular.woff2") format("woff2"),
+    url("./../fonts/grandhotel-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/montserrat-regular.woff2") format("woff2"),
+    url("./../fonts/montserrat-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary-color: #333;
   --secondary-color: #fff;
@@ -11,25 +27,54 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: var(--body-text-color);
+}
+
 h1 {
-  font-size: 9.6rem;
+  font-size: 6.4rem;
 }
 
 h2 {
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 2rem;
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-family: Grandhotel, cursive;
   color: var(--heading-color);
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 9.6rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 3.2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  body {
+    font-size: 1.8rem;
+  }
 }
