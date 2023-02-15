@@ -39,6 +39,7 @@ body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   color: var(--body-text-color);
+  line-height: 1.5;
 }
 
 h1 {
@@ -63,6 +64,11 @@ h3,
 h4 {
   font-family: Grandhotel, cursive;
   color: var(--heading-color);
+}
+
+p {
+  margin: 0;
+  max-width: 50ch;
 }
 
 @media screen and (min-width: 1024px) {
@@ -124,9 +130,6 @@ h4 {
 }
 
 /********** #LISTS **********/
-body {
-  background-color: var(--primary-color);
-}
 .list {
   list-style-type: none;
 }
@@ -142,5 +145,52 @@ body {
 @media screen and(min-height:1024px) {
   .list__item {
     margin: 1.8rem 5rem;
+  }
+}
+
+/********** #INFO **********/
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info--reverse {
+  flex-direction: column-reverse;
+}
+
+.info__title {
+  margin: 3.2rem 0;
+  color: var(--heading-color);
+}
+
+.info__title--centered {
+  align-self: center;
+}
+
+.info__title--secondary {
+  color: var(--primary-color);
+}
+
+.info__text {
+  color: var(--body-text-color);
+}
+
+.info__text--small {
+  font-size: 1rem;
+}
+
+.info__text--secondary {
+  color: var(--primary-color);
+}
+
+.info__text--centered {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .info__title {
+    margin: 4rem 0;
+  }
+  .info__text--small {
+    font-size: 1.2rem;
   }
 }
