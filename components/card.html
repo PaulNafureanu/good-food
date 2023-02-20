@@ -1,0 +1,45 @@
+<div class="card card--small">
+  <picture>
+    <source
+      type="image/webp"
+      srcset="
+        img/webp/hero.webp     480w,
+        img/webp/hero@2x.webp  960w,
+        img/webp/hero@3x.webp 1440w,
+        img/webp/hero@4x.webp 1920w,
+        img/webp/hero@5x.webp 2400w
+      "
+      sizes="
+        (max-width:1024px) 30rem,
+        45rem
+        "
+    />
+    <source
+      type="image/jpg"
+      srcset="
+        img/jpg/hero.jpg     480w,
+        img/jpg/hero@2x.jpg  960w,
+        img/jpg/hero@3x.jpg 1440w,
+        img/jpg/hero@4x.jpg 1920w,
+        img/jpg/hero@5x.jpg 2400w
+      "
+      sizes="
+        (max-width:1024px) 30rem,
+        45rem
+        "
+    />
+    <img
+      class="picture picture--round picture--small"
+      src="img/jpg/hero@3x.jpg"
+      alt="Hero Image"
+    />
+  </picture>
+  <div class="info">
+    <h3 class="info__title info__title--secondary info__title--centered">
+      Title Here
+    </h3>
+    <p class="info__text info__text--secondary info__text--centered">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </div>
+</div>

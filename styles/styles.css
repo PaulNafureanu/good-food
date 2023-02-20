@@ -37,7 +37,7 @@ html {
 
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: var(--body-text-color);
   line-height: 1.5;
 }
@@ -51,7 +51,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h4 {
@@ -64,6 +64,7 @@ h3,
 h4 {
   font-family: Grandhotel, cursive;
   color: var(--heading-color);
+  margin: 0;
 }
 
 p {
@@ -81,11 +82,11 @@ p {
   }
 
   h3 {
-    font-size: 3.2rem;
+    font-size: 4.6rem;
   }
 
   h4 {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   body {
@@ -158,7 +159,6 @@ p {
 }
 
 .info__title {
-  margin: 3.2rem 0;
   color: var(--heading-color);
 }
 
@@ -187,9 +187,6 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  .info__title {
-    margin: 4rem 0;
-  }
   .info__text--small {
     font-size: 1.2rem;
   }
@@ -204,8 +201,8 @@ p {
 }
 
 .picture--small {
-  width: 20rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
 }
 
 .picture--round {
@@ -222,5 +219,27 @@ p {
   .picture--small {
     width: 25rem;
     height: 25rem;
+  }
+}
+
+/********** #CARDS **********/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+
+.card--small {
+  max-width: 25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 45rem;
+  }
+  .card--small {
+    max-width: 25rem;
   }
 }
