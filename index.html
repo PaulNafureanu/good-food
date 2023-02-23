@@ -8,5 +8,37 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="menu">
+      <ul class="list list--horizontal">
+        <li class="list__item list__item--btn">Home</li>
+        <li class="list__item list__item--btn">Product</li>
+        <li class="list__item list__item--btn">Promo</li>
+        <li class="list__item list__item--btn">About</li>
+        <li class="list__item list__item--btn">Contact</li>
+        <div class="collapsible collapsible--horizontal">
+          <div id="searchInput" class="collapsible__extension">
+            <input
+              class="input"
+              type="text"
+              id="subscribe"
+              placeholder="Search..."
+            />
+          </div>
+          <div
+            onclick="toggleExtension('searchInput')"
+            class="collapsible__trigger"
+          >
+            <img
+              class="icon icon--white icon--border-onhover icon--golden-onhover"
+              src="./img/svg/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>

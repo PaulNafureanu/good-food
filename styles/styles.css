@@ -141,7 +141,23 @@ p {
 }
 
 .list__item {
-  margin: 1.2rem 3.2rem;
+  margin: 1.2rem 0;
+}
+
+.list__item--btn {
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: 0.25s;
+  text-align: center;
+  width: 100%;
+}
+
+.list__item--btn:hover {
+  cursor: pointer;
+  border: 2px solid var(--heading-color);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+  color: var(--heading-color);
 }
 
 @media screen and(min-height:1024px) {
@@ -270,7 +286,6 @@ p {
 /********** #INPUT **********/
 .input {
   height: 3.2rem;
-  width: 100%;
   outline: 0;
   margin: 0;
   border: 1px solid transparent;
@@ -327,4 +342,72 @@ p {
 
 .callout .btn {
   margin-top: 2rem;
+}
+
+/********** #ICON **********/
+.icon {
+  height: 3rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon--white {
+  filter: invert(100%) sepia(95%) saturate(2%) hue-rotate(36deg)
+    brightness(104%) contrast(101%);
+}
+
+.icon--golden {
+  filter: invert(73%) sepia(77%) saturate(2401%) hue-rotate(3deg)
+    brightness(106%) contrast(111%);
+}
+
+.icon--border-onhover:hover {
+  border: 2px solid black;
+}
+
+.icon--golden-onhover:hover {
+  filter: invert(73%) sepia(77%) saturate(2401%) hue-rotate(3deg)
+    brightness(106%) contrast(111%);
+}
+
+/********** #COLLAPSIBLE **********/
+
+.collapsible {
+}
+
+.collapsible--horizontal {
+  display: inline-flex;
+}
+.collapsible__trigger {
+  margin: auto 1rem;
+}
+
+.collapsible__trigger:hover {
+  cursor: pointer;
+}
+
+.collapsible__extension {
+  display: none;
+}
+
+.collapsible__extension--extended {
+  display: inline;
+}
+
+/********** #MENU **********/
+body {
+  background-color: #333;
+}
+
+.menu {
+  width: 50vw;
+  border: 2px solid green;
+}
+
+.menu .icon {
+  margin-inline: 1rem;
 }
