@@ -322,3 +322,9 @@ p {
 }
 
 /********** #CALLOUT **********/
+.callout {
+}
+
+.callout .btn {
+  margin-top: 2rem;
+}
