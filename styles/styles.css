@@ -107,6 +107,7 @@ p {
   text-transform: uppercase;
   transition: 0.2s;
   width: 16rem;
+  margin: 0;
 }
 
 .btn:hover {
@@ -267,20 +268,16 @@ p {
 }
 
 /********** #INPUT **********/
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100rem;
-}
 .input {
-  width: 55rem;
-  height: 5rem;
+  height: 3.2rem;
+  width: 100%;
   outline: 0;
-  border: 0;
+  margin: 0;
+  border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.05);
   padding: 0rem 2.5rem;
+  transition: 0.5s;
 }
 
 ::placeholder {
@@ -288,5 +285,40 @@ body {
 }
 
 .input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
+.input-group {
+  border: 1px solid transparent;
+  transition: 0.5s;
+  display: flex;
+  margin: 0 1rem;
+}
+
+.input-group .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: 1px;
+}
+
+.input-group .input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group .input:focus {
+  border: 1px solid transparent;
+}
+
+.input-group:focus-within {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    height: 5rem;
+  }
+}
+
+/********** #CALLOUT **********/
