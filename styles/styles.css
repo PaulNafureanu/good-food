@@ -29,10 +29,17 @@
   --body-text-color: #fff;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /********** #TYPOGRAPHY **********/
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -443,10 +450,6 @@ p {
 }
 
 /********** #MENU **********/
-body {
-  background-color: #333;
-}
-
 .menu {
   min-width: 50vw;
 }
@@ -521,4 +524,49 @@ body {
     background-color: transparent;
     border: none;
   }
+}
+
+/********** #HEADER **********/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  margin-inline: 3rem;
+}
+
+.logo__img {
+  height: 4rem;
+  filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(255deg)
+    brightness(104%) contrast(103%);
+}
+
+.logo__text {
+  display: inline;
+  margin-left: 2.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/********** #BLOCKS **********/
+
+.block {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.block--dark {
+  background-color: var(--primary-color);
+}
+
+.block__content {
+  width: 90%;
+  height: 100%;
 }
