@@ -173,6 +173,7 @@ p {
 }
 
 /********** #LISTS **********/
+
 .list {
   display: inline-flex;
   flex-direction: column;
@@ -195,6 +196,7 @@ p {
 }
 
 /********** #INFO **********/
+
 .info {
   display: flex;
   flex-direction: column;
@@ -227,4 +229,49 @@ p {
 
 .info__text--centered {
   text-align: center;
+}
+
+/********** #PICTURES **********/
+.picture {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.picture--normal {
+  width: 30rem;
+  height: 30rem;
+}
+
+.picture--small {
+  width: 25rem;
+  height: 25rem;
+}
+
+.picture--round {
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .picture--normal {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .picture--small {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .picture--normal {
+    width: 60rem;
+    height: 60rem;
+  }
+
+  .picture--small {
+    width: 35rem;
+    height: 35rem;
+  }
 }
