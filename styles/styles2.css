@@ -23,10 +23,15 @@
 }
 
 :root {
-  --primary-color: #333;
+  --primary-color: #333333;
+  --primary-color-lighter: hsl(0, 0%, 30%);
   --secondary-color: #fff;
   --heading-color: #ffc200;
+  --heading-color-darker: hsl(46, 100%, 40%);
   --body-text-color: #fff;
+  --primary-shadow-color: rgba(0, 0, 0, 0.1);
+  --secondary-shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-time: 0.2s;
 }
 
 *,
@@ -125,5 +130,44 @@ p {
 
   body {
     font-size: 2.7rem;
+  }
+}
+
+/********** #BUTTONS **********/
+.btn {
+  border-radius: 3px;
+  border: 0;
+  box-shadow: 0 0 10px var(--primary-shadow-color);
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  padding: 0.8rem 3rem;
+  text-transform: uppercase;
+  transition: var(--transition-time);
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px var(--secondary-shadow-color);
+}
+
+.btn--primary {
+  background-color: var(--heading-color);
+  color: var(--primary-color);
+}
+
+.btn--primary:hover {
+  background-color: var(--heading-color-darker);
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    border-radius: 5px;
+    padding: 1.6rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .btn {
+    padding: 2.1rem 10rem;
   }
 }
