@@ -193,3 +193,38 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+/********** #INFO **********/
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info--reverse {
+  flex-direction: column-reverse;
+}
+
+.info__title {
+  color: var(--heading-color);
+}
+
+.info__title--centered {
+  align-self: center;
+}
+
+.info__title--secondary {
+  color: var(--primary-color);
+}
+
+.info__text {
+  color: var(--body-text-color);
+}
+
+.info__text--secondary {
+  color: var(--primary-color);
+}
+
+.info__text--centered {
+  text-align: center;
+}
