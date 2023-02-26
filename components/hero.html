@@ -1,0 +1,92 @@
+<section class="block block--dark hero">
+  <div class="block__bg hero__bg">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="
+          img/webp/hero.webp     480w,
+          img/webp/hero@2x.webp  960w,
+          img/webp/hero@3x.webp 1440w,
+          img/webp/hero@4x.webp 1920w,
+          img/webp/hero@5x.webp 2400w
+        "
+      />
+      <source
+        type="image/jpg"
+        srcset="
+          img/jpg/hero.jpg     480w,
+          img/jpg/hero@2x.jpg  960w,
+          img/jpg/hero@3x.jpg 1440w,
+          img/jpg/hero@4x.jpg 1920w,
+          img/jpg/hero@5x.jpg 2400w
+        "
+      />
+      <img
+        class="picture picture--full hero__picture"
+        src="img/jpg/hero@3x.jpg"
+        alt="Hero Image"
+      />
+    </picture>
+    <img class="box box__svg--dark hero__svg" src="./img/svg/bg1.svg" alt="" />
+    <div class="box box--dark hero__box"></div>
+  </div>
+  <div class="block__content">
+    <header class="header">
+      <div class="logo">
+        <img
+          class="logo__img"
+          src="./img/svg/logo.svg"
+          alt="Logo of Good Food"
+        />
+        <div class="logo__text">Good Food</div>
+      </div>
+      <div class="menu">
+        <div class="collapsible menu__collapsible">
+          <div
+            onclick="toggleExtension('extendedMenu')"
+            class="collapsible__trigger menu__btn menu__btn--right"
+          >
+            <img class="icon icon--white" src="./img/svg/menu.svg" alt="" />
+          </div>
+          <div
+            id="extendedMenu"
+            class="collapsible__extension menu__panel menu__panel--right"
+          >
+            <ul class="list list--right-vertical menu__list">
+              <li class="list__item list__item--btn">Home</li>
+              <li class="list__item list__item--btn">Product</li>
+              <li class="list__item list__item--btn">Promo</li>
+              <li class="list__item list__item--btn">About</li>
+              <li class="list__item list__item--btn">Contact</li>
+              <div
+                class="list__item collapsible collapsible--horizontal menu__search"
+              >
+                <div
+                  id="searchMenu"
+                  class="collapsible__extension collapsible__extension--always-extended"
+                >
+                  <input
+                    class="input"
+                    type="text"
+                    id="subscribe"
+                    placeholder="Search..."
+                  />
+                </div>
+                <div
+                  onclick="toggleExtension('searchMenu')"
+                  class="collapsible__trigger"
+                >
+                  <img
+                    class="icon icon--white"
+                    src="./img/svg/search.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
