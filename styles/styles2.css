@@ -275,3 +275,34 @@ p {
     height: 35rem;
   }
 }
+
+/********** #CARDS **********/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+
+.card--small {
+  max-width: 25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 40rem;
+  }
+  .card--small {
+    max-width: 20rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .card {
+    max-width: 60rem;
+  }
+  .card--small {
+    max-width: 35rem;
+  }
+}
