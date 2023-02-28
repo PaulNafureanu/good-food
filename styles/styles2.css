@@ -447,3 +447,49 @@ p {
 .callout__btn {
   margin-top: 2rem;
 }
+
+/********** #ICON **********/
+.icon {
+  height: 3.8rem;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon--white {
+  filter: invert(100%) sepia(95%) saturate(2%) hue-rotate(36deg)
+    brightness(104%) contrast(101%);
+}
+
+.icon--golden {
+  filter: invert(73%) sepia(77%) saturate(2401%) hue-rotate(3deg)
+    brightness(106%) contrast(111%);
+}
+
+.icon--border-onhover:hover {
+  border: 2px solid black;
+}
+
+.icon--golden-onhover:hover {
+  filter: invert(73%) sepia(77%) saturate(2401%) hue-rotate(3deg)
+    brightness(106%) contrast(111%);
+}
+
+@media screen and (min-width: 1024px) {
+  .icon {
+    border-radius: 5px;
+    height: 4rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .icon {
+    height: 5rem;
+  }
+}
