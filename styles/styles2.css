@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  background-color: var(--secondary-color-darker);
+  background-color: var(--primary-color);
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: lighter;
   font-size: 1.6rem;
@@ -145,6 +145,8 @@ p {
   padding: 0.8rem 3rem;
   text-transform: uppercase;
   transition: var(--transition-time);
+  width: fit-content;
+  height: fit-content;
 }
 
 .btn:hover {
@@ -205,8 +207,8 @@ p {
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: fit-content;
+  height: fit-content;
 }
 .info--reverse {
   flex-direction: column-reverse;
@@ -233,6 +235,7 @@ p {
 }
 
 .info__text--centered {
+  align-self: center;
   text-align: center;
 }
 
@@ -426,4 +429,21 @@ p {
   .input-group {
     border-radius: 5px;
   }
+}
+
+/********** #CALLOUT **********/
+.callout {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: fit-content;
+  height: fit-content;
+}
+
+.callout--centered {
+  align-items: center;
+}
+
+.callout__btn {
+  margin-top: 2rem;
 }
