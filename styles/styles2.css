@@ -493,3 +493,43 @@ p {
     height: 5rem;
   }
 }
+
+/********** #COLLAPSIBLE **********/
+
+.collapsible {
+  width: fit-content;
+  height: fit-content;
+}
+
+.collapsible--horizontal {
+  display: inline-flex;
+  align-items: center;
+}
+
+.collapsible__trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.collapsible__trigger:hover {
+  cursor: pointer;
+}
+
+.collapsible__extension {
+  display: none;
+}
+
+.collapsible__extension--extended {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapsible__extension--always-extended {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
