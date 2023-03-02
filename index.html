@@ -11,7 +11,39 @@
   </head>
   <body>
     <section class="block block--dark">
-      <div class="block__bg"></div>
+      <div class="block__bg hero__bg">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              img/webp/hero.webp     480w,
+              img/webp/hero@2x.webp  960w,
+              img/webp/hero@3x.webp 1440w,
+              img/webp/hero@4x.webp 1920w,
+              img/webp/hero@5x.webp 2400w
+            "
+          />
+          <source
+            type="image/jpg"
+            srcset="
+              img/jpg/hero.jpg     480w,
+              img/jpg/hero@2x.jpg  960w,
+              img/jpg/hero@3x.jpg 1440w,
+              img/jpg/hero@4x.jpg 1920w,
+              img/jpg/hero@5x.jpg 2400w
+            "
+          />
+          <img
+            class="picture hero__picture"
+            src="img/jpg/hero@3x.jpg"
+            alt="Hero Image"
+          />
+        </picture>
+        <div class="hero__svg">
+          <img class="svg svg--dark" src="./img/svg/bg1.svg" alt="" />
+        </div>
+        <div class="box box--dark hero__box"></div>
+      </div>
       <div class="block__content"></div>
     </section>
     <script src="./js/script.js"></script>
