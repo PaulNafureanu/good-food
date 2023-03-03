@@ -593,7 +593,7 @@ p {
   }
 
   .menu__list .list__item {
-    width: 12rem;
+    width: 8vw;
   }
 
   .menu__list .menu__search {
@@ -619,7 +619,6 @@ p {
 
 @media screen and (min-width: 1920px) {
   .menu__list .list__item {
-    width: 20rem;
     height: 7rem;
   }
 
@@ -744,4 +743,40 @@ p {
   margin-right: 7vw;
   bottom: 7vw;
   left: 7vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .menu {
+    box-shadow: none;
+  }
+
+  .hero__picture {
+    translate: -10% 0;
+  }
+
+  .hero__svg {
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 25vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__svg .svg {
+    transform: scaleX(-1);
+    rotate: 0deg;
+    height: 110%;
+    width: 100vw;
+    translate: -70% 0;
+  }
+
+  .hero__content .callout {
+    /* margin-right: 0; */
+    bottom: auto;
+    left: 50%;
+    top: 25%;
+  }
 }
