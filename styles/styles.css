@@ -717,6 +717,10 @@ p {
 }
 
 /********** #HERO **********/
+.hero .menu {
+  z-index: 3;
+}
+
 .hero__picture {
   transform: scale(-1);
 }
