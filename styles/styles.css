@@ -381,7 +381,7 @@ p {
 }
 
 ::placeholder {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .input:focus {
@@ -657,45 +657,6 @@ p {
   right: 0;
 }
 
-/********** #BLOCKS **********/
-
-.block {
-  align-items: center;
-  display: flex;
-  height: fit-content;
-  justify-content: center;
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0;
-  position: relative;
-  width: 100vw;
-  border: 3px solid blue;
-}
-
-.block--dark {
-  background-color: var(--primary-color);
-}
-
-.block--white {
-  background-color: var(--secondary-color-darker);
-}
-
-.block__bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border: 3px solid green;
-}
-
-.block__content {
-  position: relative;
-  z-index: 5;
-  width: 90%;
-  height: 95%;
-}
-
 /********** #BOX **********/
 
 .box {
@@ -723,64 +684,60 @@ p {
     contrast(60%);
 }
 
-/********** #HERO **********/
-
-.hero {
-  height: 100vh;
-}
-
-/* .hero__bg {
-} */
-
-.hero__picture {
-  transform: scale(-1);
-  position: absolute;
-  top: -10%;
-  left: 0;
-}
-
-.hero__svg {
+/********** #BLOCKS **********/
+.block {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.hero__svg .svg {
-  width: fit-content;
-  height: 120vw;
-  rotate: -90deg;
-  translate: 0 25%;
-  z-index: 1;
+.block--dark {
+  background-color: var(--primary-color);
 }
 
-.hero__box {
-  height: calc(34vh - 9vw);
+.block--white {
+  background-color: var(--secondary-color-darker);
+}
+
+.block__bg {
+  width: 100%;
+  height: fit-content;
+}
+
+.block__content {
   position: absolute;
-  bottom: 0%;
-  z-index: 1;
-  border: 2px solid red;
+  width: 90%;
+  height: 95%;
 }
 
-/* .hero__content {
-} */
+/********** #HERO **********/
+.hero__picture {
+  transform: scale(-1);
+}
 
-.hero__content .header {
-  z-index: 5;
+.hero__svg {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.hero__svg .svg {
+  translate: 0 -40%;
+  height: 105vw;
+  rotate: -90deg;
 }
 
 .hero__content .callout {
   position: absolute;
-  top: 50vh;
-}
-
-@media screen and (min-width: 1024px) {
-  .hero__picture {
-    transform: scale(-1);
-    position: absolute;
-    left: -10%;
-    top: 0;
-  }
+  margin-right: 7vw;
+  bottom: 7vw;
+  left: 7vw;
 }

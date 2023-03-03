@@ -1,27 +1,100 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+/********** #BLOCKS **********/
+
+.block {
+  align-items: center;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+  border: 3px solid blue;
 }
 
-body {
-  width: 100vw;
+.block--dark {
+  background-color: var(--primary-color);
+}
+
+.block--white {
+  background-color: var(--secondary-color-darker);
+}
+
+.block__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 3px solid green;
+}
+
+.block__content {
+  position: relative;
+  z-index: 5;
+  width: 90%;
+  height: 95%;
+}
+
+/********** #HERO **********/
+
+.hero {
   height: 100vh;
 }
 
-.container {
+/* .hero__bg {
+} */
+
+.hero__picture {
+  transform: scale(-1);
+  position: absolute;
+  top: -10%;
+  left: 0;
+}
+
+.hero__svg {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  border: 3px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-.element {
-  width: 100%;
+.hero__svg .svg {
+  width: fit-content;
+  height: 120vw;
   rotate: -90deg;
-  translate: 0 25vh;
-  border: 3px solid green;
+  translate: 0 25%;
+  z-index: 1;
+}
+
+.hero__box {
+  height: calc(34vh - 9vw);
+  position: absolute;
+  bottom: 0%;
+  z-index: 1;
+  border: 2px solid red;
+}
+
+/* .hero__content {
+} */
+
+.hero__content .header {
+  z-index: 5;
+}
+
+.hero__content .callout {
+  position: absolute;
+  top: 50vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__picture {
+    transform: scale(-1);
+    position: absolute;
+    left: -10%;
+    top: 0;
+  }
 }
