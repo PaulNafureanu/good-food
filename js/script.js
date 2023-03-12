@@ -16,7 +16,7 @@ function styleInputGroupOnFocus(groupId, inputId, btnId) {
 
   inputEl.addEventListener("focusin", () => {
     groupEl.style.border = "1px solid rgba(0, 0, 0, 0.1)";
-    groupEl.style.boxShadow = "0 0 50px 50px rgba(0, 0, 0, 0.15)";
+    groupEl.style.boxShadow = "0 0 15px 15px rgba(0, 0, 0, 0.05)";
   });
   inputEl.addEventListener("focusout", () => {
     groupEl.style.border = "1px solid transparent";
