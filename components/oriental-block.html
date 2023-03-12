@@ -1,0 +1,50 @@
+<section class="block block--white oriental-block">
+  <div class="block__bg">
+    <div class="oriental-block__svg">
+      <img class="svg svg--dark" src="./img/svg/bg1.svg" alt="" />
+    </div>
+    <div class="box box--white oriental-block__box1"></div>
+    <div class="box box--dark oriental-block__box2"></div>
+  </div>
+  <div class="block__content">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="
+          img/webp/hero.webp     480w,
+          img/webp/hero@2x.webp  960w,
+          img/webp/hero@3x.webp 1440w,
+          img/webp/hero@4x.webp 1920w,
+          img/webp/hero@5x.webp 2400w
+        "
+      />
+      <source
+        type="image/jpg"
+        srcset="
+          img/jpg/hero.jpg     480w,
+          img/jpg/hero@2x.jpg  960w,
+          img/jpg/hero@3x.jpg 1440w,
+          img/jpg/hero@4x.jpg 1920w,
+          img/jpg/hero@5x.jpg 2400w
+        "
+      />
+      <img
+        class="picture picture--round picture--normal"
+        src="img/jpg/hero@3x.jpg"
+        alt="Hero Image"
+      />
+    </picture>
+    <div class="callout">
+      <div class="info">
+        <h2 class="info__title">Oriental Taste</h2>
+        <p class="info__text callout__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          similique incidunt fuga? Nostrum, aut.
+        </p>
+      </div>
+      <button class="btn btn--primary btn--nowrap callout__btn">
+        Order Now
+      </button>
+    </div>
+  </div>
+</section>
