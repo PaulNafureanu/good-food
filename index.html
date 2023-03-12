@@ -9,6 +9,449 @@
     <title>Document</title>
   </head>
   <body>
+    <section class="block block--dark hero">
+      <div class="block__bg hero__bg">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              img/webp/hero.webp     480w,
+              img/webp/hero@2x.webp  960w,
+              img/webp/hero@3x.webp 1440w,
+              img/webp/hero@4x.webp 1920w,
+              img/webp/hero@5x.webp 2400w
+            "
+          />
+          <source
+            type="image/jpg"
+            srcset="
+              img/jpg/hero.jpg     480w,
+              img/jpg/hero@2x.jpg  960w,
+              img/jpg/hero@3x.jpg 1440w,
+              img/jpg/hero@4x.jpg 1920w,
+              img/jpg/hero@5x.jpg 2400w
+            "
+          />
+          <img
+            class="picture hero__picture"
+            src="img/jpg/hero@3x.jpg"
+            alt="Hero Image"
+          />
+        </picture>
+        <div class="hero__svg">
+          <img class="svg svg--dark" src="./img/svg/bg1.svg" alt="" />
+        </div>
+      </div>
+      <div class="block__content hero__content">
+        <div class="header">
+          <div class="logo">
+            <img
+              class="icon icon--white"
+              src="./img/svg/logo.svg"
+              alt="Good Food Logo"
+            />
+            <div class="logo__text">Good Food</div>
+          </div>
+          <div class="menu">
+            <div class="collapsible menu__collapsible">
+              <div
+                onclick="toggleExtension('searchInput')"
+                class="collapsible__trigger menu__btn"
+              >
+                <img
+                  class="icon icon--white icon--golden-onhover"
+                  src="./img/svg/menu.svg"
+                  alt=""
+                />
+              </div>
+              <div id="searchInput" class="collapsible__extension">
+                <ul class="list menu__list">
+                  <li class="list__item">Home</li>
+                  <li class="list__item">Product</li>
+                  <li class="list__item">Promo</li>
+                  <li class="list__item">About</li>
+                  <li class="list__item">Contact</li>
+                  <div
+                    class="list__item menu__search collapsible collapsible--horizontal"
+                  >
+                    <div id="searchMenu" class="collapsible__extension">
+                      <input
+                        class="input"
+                        type="text"
+                        size="20"
+                        id="search"
+                        placeholder="Search..."
+                      />
+                    </div>
+                    <div
+                      onclick="toggleExtension('searchMenu')"
+                      class="collapsible__trigger"
+                    >
+                      <img
+                        class="icon icon--white icon--golden-onhover"
+                        src="./img/svg/search.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="info">
+            <h1 class="info__title">Hello there!</h1>
+            <p class="info__text callout__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              similique incidunt fuga? Nostrum, aut.
+            </p>
+          </div>
+          <button class="btn btn--primary btn--nowrap callout__btn">
+            Order Now
+          </button>
+        </div>
+        <div class="decorations">
+          <img
+            class="svg svg--golden decorations__item decorations__garlic"
+            src="./img/svg/garlic1.svg"
+            alt=""
+          />
+          <img
+            class="svg svg--golden decorations__item decorations__leaf"
+            src="./img/svg/leaf1.svg"
+            alt=""
+          />
+          <img
+            class="svg svg--golden decorations__item decorations__peppers"
+            src="./img/svg/peppers.svg"
+            alt=""
+          />
+          <img
+            class="svg svg--golden decorations__item decorations__tomato1"
+            src="./img/svg/tomato1.svg"
+            alt=""
+          /><img
+            class="svg svg--golden decorations__item decorations__tomato2"
+            src="./img/svg/tomato1.svg"
+            alt=""
+          /><img
+            class="svg svg--golden decorations__item decorations__tomato3"
+            src="./img/svg/tomato1.svg"
+            alt=""
+          /><img
+            class="svg svg--golden decorations__item decorations__tomato4"
+            src="./img/svg/tomato1.svg"
+            alt=""
+          />
+          <img
+            class="svg svg--golden decorations__item decorations__tomato"
+            src="./img/svg/tomato2.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white dish-block">
+      <div class="block__bg"></div>
+      <div class="block__content">
+        <div class="info">
+          <h2 class="info__title info__title--centered info__title--secondary">
+            Best Sellers
+          </h2>
+          <p class="info__text info__text--centered info__text--secondary">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+            sequi impedit cupiditate repellendus officiis voluptate quod.
+          </p>
+        </div>
+        <div class="dish-block__options">
+          <div class="card card--small">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img/webp/meal1.webp     480w,
+                  img/webp/meal1@2x.webp  960w,
+                  img/webp/meal1@3x.webp 1440w,
+                  img/webp/meal1@4x.webp 1920w,
+                  img/webp/meal1@5x.webp 2400w
+                "
+              />
+              <source
+                type="image/jpg"
+                srcset="
+                  img/jpg/meal1.jpg     480w,
+                  img/jpg/meal1@2x.jpg  960w,
+                  img/jpg/meal1@3x.jpg 1440w,
+                  img/jpg/meal1@4x.jpg 1920w,
+                  img/jpg/meal1@5x.jpg 2400w
+                "
+              />
+              <img
+                class="picture picture--round picture--small"
+                src="img/jpg/meal1@3x.jpg"
+                alt="First meal image"
+              />
+            </picture>
+            <div class="info">
+              <h4
+                class="info__title info__title--centered info__title--secondary"
+              >
+                Title Here
+              </h4>
+              <p class="info__text info__text--centered info__text--secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="card card--small">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img/webp/meal2.webp     480w,
+                  img/webp/meal2@2x.webp  960w,
+                  img/webp/meal2@3x.webp 1440w,
+                  img/webp/meal2@4x.webp 1920w,
+                  img/webp/meal2@5x.webp 2400w
+                "
+              />
+              <source
+                type="image/jpg"
+                srcset="
+                  img/jpg/meal2.jpg     480w,
+                  img/jpg/meal2@2x.jpg  960w,
+                  img/jpg/meal2@3x.jpg 1440w,
+                  img/jpg/meal2@4x.jpg 1920w,
+                  img/jpg/meal2@5x.jpg 2400w
+                "
+              />
+              <img
+                class="picture picture--round picture--small dish-block__picture2"
+                src="img/jpg/meal2@3x.jpg"
+                alt="Second meal image"
+              />
+            </picture>
+            <div class="info">
+              <h4
+                class="info__title info__title--centered info__title--secondary"
+              >
+                Title Here
+              </h4>
+              <p class="info__text info__text--centered info__text--secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="card card--small">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img/webp/meal3.webp     480w,
+                  img/webp/meal3@2x.webp  960w,
+                  img/webp/meal3@3x.webp 1440w,
+                  img/webp/meal3@4x.webp 1920w,
+                  img/webp/meal3@5x.webp 2400w
+                "
+              />
+              <source
+                type="image/jpg"
+                srcset="
+                  img/jpg/meal3.jpg     480w,
+                  img/jpg/meal3@2x.jpg  960w,
+                  img/jpg/meal3@3x.jpg 1440w,
+                  img/jpg/meal3@4x.jpg 1920w,
+                  img/jpg/meal3@5x.jpg 2400w
+                "
+              />
+              <img
+                class="picture picture--round picture--small"
+                src="img/jpg/meal3@3x.jpg"
+                alt="Third meal image"
+              />
+            </picture>
+            <div class="info">
+              <h4
+                class="info__title info__title--centered info__title--secondary"
+              >
+                Title Here
+              </h4>
+              <p class="info__text info__text--centered info__text--secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white oriental-block">
+      <div class="block__bg">
+        <div class="oriental-block__svg">
+          <img class="svg svg--dark" src="./img/svg/bg1.svg" alt="" />
+        </div>
+        <div class="box box--white oriental-block__box1"></div>
+        <div class="box box--dark oriental-block__box2"></div>
+      </div>
+      <div class="block__content">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              img/webp/hero.webp     480w,
+              img/webp/hero@2x.webp  960w,
+              img/webp/hero@3x.webp 1440w,
+              img/webp/hero@4x.webp 1920w,
+              img/webp/hero@5x.webp 2400w
+            "
+          />
+          <source
+            type="image/jpg"
+            srcset="
+              img/jpg/hero.jpg     480w,
+              img/jpg/hero@2x.jpg  960w,
+              img/jpg/hero@3x.jpg 1440w,
+              img/jpg/hero@4x.jpg 1920w,
+              img/jpg/hero@5x.jpg 2400w
+            "
+          />
+          <img
+            class="picture picture--round picture--normal"
+            src="img/jpg/hero@3x.jpg"
+            alt="Hero Image"
+          />
+        </picture>
+        <div class="callout">
+          <div class="info">
+            <h2 class="info__title">Oriental Taste</h2>
+            <p class="info__text callout__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              similique incidunt fuga? Nostrum, aut.
+            </p>
+          </div>
+          <button class="btn btn--primary btn--nowrap callout__btn">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--dark stats-block">
+      <div class="block__bg"></div>
+      <div class="block__content">
+        <div class="info">
+          <h1 class="info__title info__text--centered">Statistics</h1>
+          <p class="info__text info__text--centered">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
+            cum laborum perspiciatis corrupti dignissimos.
+          </p>
+        </div>
+        <div class="stats-block__figures">
+          <div class="stats">
+            <div class="stats__number">123</div>
+            <div class="stats__type">Outlets</div>
+          </div>
+          <div class="stats">
+            <div class="stats__number">100</div>
+            <div class="stats__type">Chefs</div>
+          </div>
+          <div class="stats">
+            <div class="stats__number">300</div>
+            <div class="stats__type">Menus</div>
+          </div>
+          <div class="stats">
+            <div class="stats__number">50</div>
+            <div class="stats__type">Countries</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white grill-block">
+      <div class="block__bg">
+        <div class="grill-block__svg">
+          <img class="svg svg--dark" src="./img/svg/bg1.svg" alt="" />
+        </div>
+        <div class="box box--white grill-block__box1"></div>
+        <div class="box box--dark grill-block__box2"></div>
+      </div>
+      <div class="block__content">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              img/webp/meal2.webp     480w,
+              img/webp/meal2@2x.webp  960w,
+              img/webp/meal2@3x.webp 1440w,
+              img/webp/meal2@4x.webp 1920w,
+              img/webp/meal2@5x.webp 2400w
+            "
+          />
+          <source
+            type="image/jpg"
+            srcset="
+              img/jpg/meal2.jpg     480w,
+              img/jpg/meal2@2x.jpg  960w,
+              img/jpg/meal2@3x.jpg 1440w,
+              img/jpg/meal2@4x.jpg 1920w,
+              img/jpg/meal2@5x.jpg 2400w
+            "
+          />
+          <img
+            class="picture picture--round picture--normal"
+            src="img/jpg/meal2@3x.jpg"
+            alt="Meal 2 Image"
+          />
+        </picture>
+        <div class="callout">
+          <div class="info">
+            <h2 class="info__title">Chicken Grill</h2>
+            <p class="info__text callout__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              similique incidunt fuga? Nostrum, aut.
+            </p>
+          </div>
+          <button class="btn btn--primary btn--nowrap callout__btn">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white subscribe-block">
+      <div class="block__bg"></div>
+      <div class="block__content">
+        <div class="info">
+          <h1 class="info__title info__title--centered info__title--secondary">
+            Subscribe
+          </h1>
+          <p class="info__text info__text--centered info__text--secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            ex molestias impedit laudantium assumenda!
+          </p>
+        </div>
+        <div
+          id="inputGroupOrder"
+          onclick="styleInputGroupOnFocus('inputGroupOrder','inputOrder','sendOrder')"
+          class="input-group"
+        >
+          <input
+            id="inputOrder"
+            class="input"
+            size="1"
+            type="text"
+            id="subscribe"
+            placeholder="Your Email"
+          />
+          <button id="sendOrder" class="btn btn--primary btn--nowrap">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <section class="block block--dark footer-block">
         <div class="block__bg"></div>
@@ -22,6 +465,32 @@
                   Accusantium autem eius ipsum molestias cupiditate,
                   perspiciatis nostrum.
                 </p>
+              </div>
+              <div class="footer-block__social-media-links">
+                <a href="#" class="link"
+                  ><img
+                    class="icon icon--white"
+                    src="./img/svg/facebook.svg"
+                    alt="facebook.com"
+                /></a>
+                <a href="#" class="link"
+                  ><img
+                    class="icon icon--white"
+                    src="./img/svg/whatsapp.svg"
+                    alt="whatsapp.com"
+                /></a>
+                <a href="#" class="link"
+                  ><img
+                    class="icon icon--white"
+                    src="./img/svg/instagram.svg"
+                    alt="instagram.com"
+                /></a>
+                <a class="link" href="#"
+                  ><img
+                    class="icon icon--white"
+                    src="./img/svg/twitter.svg"
+                    alt="twitter.com"
+                /></a>
               </div>
             </div>
 
