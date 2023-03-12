@@ -182,6 +182,7 @@ p {
 .list {
   display: inline-flex;
   flex-direction: column;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   width: fit-content;
@@ -194,10 +195,21 @@ p {
   flex-direction: row;
 }
 
+.list__title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
 .list__item {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/********** #LINKS **********/
+.link {
+  color: white;
+  text-decoration: none;
 }
 
 /********** #INFO **********/
@@ -1120,5 +1132,95 @@ p {
   }
   .subscribe-block .info {
     margin-bottom: 10vh;
+  }
+}
+
+/********** #FOOTER-BLOCK **********/
+
+.footer-block {
+  height: fit-content;
+  font-size: calc(13px + 1.1vw);
+  padding: 5% 0;
+}
+
+.footer-block .block__bg {
+  position: absolute;
+}
+
+.footer-block .block__content {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-block__info {
+  text-align: center;
+}
+
+.footer-block__info .info__title {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: calc(13px + 1.7vw);
+  color: white;
+  margin-bottom: 1vw;
+}
+.footer-block__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-block__links .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-block__links .list__title {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: calc(13px + 1.7vw);
+  color: white;
+  margin: 6vw 0 1vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-block {
+    height: 100vh;
+  }
+
+  .footer-block .block__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-block__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-block__info {
+    margin-right: 5vw;
+    text-align: start;
+  }
+
+  .footer-block__links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: fit-content;
+  }
+  .footer-block__links .list__title {
+    margin: 0;
+    margin-bottom: 1vw;
+  }
+
+  .footer-block__links .list {
+    margin-left: 2vw;
+    align-items: flex-start;
   }
 }
