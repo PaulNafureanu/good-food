@@ -9,57 +9,45 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="block block--white grill-block">
+    <section class="block block--dark comment--block">
       <div class="block__bg">
-        <div class="grill-block__svg">
-          <img class="svg svg--dark" src="./img/svg/bg1.svg" alt="" />
-        </div>
-        <div class="box box--white grill-block__box1"></div>
-        <div class="box box--dark grill-block__box2"></div>
-      </div>
-      <div class="block__content">
         <picture>
           <source
             type="image/webp"
             srcset="
-              img/webp/meal2.webp     480w,
-              img/webp/meal2@2x.webp  960w,
-              img/webp/meal2@3x.webp 1440w,
-              img/webp/meal2@4x.webp 1920w,
-              img/webp/meal2@5x.webp 2400w
+              img/webp/hero.webp     480w,
+              img/webp/hero@2x.webp  960w,
+              img/webp/hero@3x.webp 1440w,
+              img/webp/hero@4x.webp 1920w,
+              img/webp/hero@5x.webp 2400w
             "
           />
           <source
             type="image/jpg"
             srcset="
-              img/jpg/meal2.jpg     480w,
-              img/jpg/meal2@2x.jpg  960w,
-              img/jpg/meal2@3x.jpg 1440w,
-              img/jpg/meal2@4x.jpg 1920w,
-              img/jpg/meal2@5x.jpg 2400w
+              img/jpg/hero.jpg     480w,
+              img/jpg/hero@2x.jpg  960w,
+              img/jpg/hero@3x.jpg 1440w,
+              img/jpg/hero@4x.jpg 1920w,
+              img/jpg/hero@5x.jpg 2400w
             "
           />
-          <img
-            class="picture picture--round picture--normal"
-            src="img/jpg/meal2@3x.jpg"
-            alt="Meal 2 Image"
-          />
+          <img class="picture" src="img/jpg/hero@3x.jpg" alt="Hero Image" />
         </picture>
-        <div class="callout">
-          <div class="info">
-            <h2 class="info__title">Chicken Grill</h2>
-            <p class="info__text callout__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              similique incidunt fuga? Nostrum, aut.
-            </p>
-          </div>
-          <button class="btn btn--primary btn--nowrap callout__btn">
-            Order Now
-          </button>
+        <div class="comment__layer"></div>
+      </div>
+      <div class="block__content">
+        <div class="info info--reverse">
+          <h2 class="info__title info__title--centered info__title--secondary">
+            Lenora Fields
+          </h2>
+          <p class="info__text info__text--centered info__text--secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quo
+            laboriosam? Consectetur, amet exercitationem.
+          </p>
         </div>
       </div>
     </section>
-
     <script src="./js/script.js"></script>
   </body>
 </html>
