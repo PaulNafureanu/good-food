@@ -32,7 +32,8 @@
   --body-text-color: #fff;
   --primary-shadow-color: rgba(0, 0, 0, 0.1);
   --secondary-shadow-color: rgba(0, 0, 0, 0.2);
-  --transparent-primary-color: rgba(51, 51, 51, 0.8);
+  --transparent-primary-color: rgba(51, 51, 51, 0.4);
+  --transparent-secondary-color: rgba(51, 51, 51, 0.9);
   --transition-time: 0.2s;
 }
 
@@ -126,10 +127,6 @@ p {
   h4 {
     font-size: 4rem;
   }
-
-  /* body {
-    font-size: 3.5rem;
-  } */
 }
 
 /********** #BUTTONS **********/
@@ -423,15 +420,15 @@ p {
 .callout--centered {
   align-items: center;
 }
-/* 
+
 .callout__btn {
-  margin-top: 1.5rem;
-  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 1vw;
 }
 
 .callout__text {
-  margin-left: 1rem;
-} */
+  margin-left: 1vw;
+}
 
 @media screen and (min-width: 1024px) {
   /* .callout__btn {
@@ -545,9 +542,9 @@ p {
 .menu {
   width: fit-content;
   height: fit-content;
-  background-color: var(--transparent-primary-color);
   border-bottom-left-radius: 5px;
   box-shadow: 0 0 10px 10px var(--primary-shadow-color);
+  background-color: var(--transparent-secondary-color);
 }
 
 .menu__collapsible {
@@ -589,6 +586,7 @@ p {
 @media screen and (min-width: 1024px) {
   .menu {
     border-bottom-left-radius: 5px;
+    background-color: transparent;
   }
 
   .menu__btn {
@@ -720,7 +718,7 @@ p {
 .decorations__leaf {
   transform: scaleX(-1);
   top: calc(56.9vw + 118px);
-  left: calc(-6px - 3vw);
+  left: calc(-10px - 3vw);
 }
 .decorations__peppers {
   transform: scaleX(-1);
@@ -838,7 +836,13 @@ p {
 }
 
 /********** #HERO **********/
-.hero .menu {
+.hero .header {
+  position: fixed;
+  background: var(--transparent-secondary-color);
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  left: 0;
   z-index: 3;
 }
 
@@ -868,6 +872,12 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  .hero .header {
+    background: linear-gradient(var(--transparent-primary-color), transparent);
+    box-shadow: none;
+    font-size: 1.6vw;
+    font-weight: 400;
+  }
   .hero .menu {
     box-shadow: none;
   }
@@ -1085,15 +1095,6 @@ p {
 }
 
 /********** #ORIENTAL-BLOCK **********/
-body {
-  /* background-color: var(--primary-color); */
-}
-
-.stats-block {
-  /* margin-top: 10rem; */
-  /* border-top: 1px solid red; */
-}
-
 .oriental-block {
   height: fit-content;
 }
@@ -1129,9 +1130,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .oriental-block {
-  }
-
   .oriental-block .block__content {
     display: flex;
     flex-direction: row;
@@ -1414,6 +1412,5 @@ body {
 }
 
 /*TODO:
-- Fix menu
 - Check HTML and CSS with validators
 */
