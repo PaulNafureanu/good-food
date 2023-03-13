@@ -412,7 +412,7 @@ p {
 .callout {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   width: fit-content;
   height: fit-content;
 }
@@ -859,9 +859,8 @@ p {
 }
 
 .hero__svg .svg {
-  translate: 0 -40%;
+  transform: rotate(-90deg) translate(45%);
   height: 105vw;
-  rotate: -90deg;
 }
 
 .hero__content .callout {
@@ -883,7 +882,7 @@ p {
   }
 
   .hero__picture {
-    translate: -10% 0;
+    transform: translate(-10%) scale(-1);
   }
 
   .hero__svg {
@@ -898,11 +897,9 @@ p {
   }
 
   .hero__svg .svg {
-    transform: scaleX(-1);
-    rotate: 0deg;
+    transform: scaleX(-1) translate(70%);
     height: 110%;
     width: 100vw;
-    translate: -70% 0;
   }
 
   .hero__content .callout {
@@ -1110,8 +1107,7 @@ p {
   position: absolute;
   height: 100vw;
   width: 100vw;
-  rotate: -90deg;
-  transform: scaleY(-1.1);
+  transform: rotate(-90deg) scaleY(-1.2);
 }
 
 .oriental-block .block__content {
@@ -1166,8 +1162,7 @@ p {
   position: absolute;
   height: 100vw;
   width: 100vw;
-  rotate: -90deg;
-  transform: scaleY(-1.1);
+  transform: rotate(-90deg) scaleY(-1.2);
 }
 
 .grill-block .block__content {
@@ -1413,4 +1408,5 @@ p {
 
 /*TODO:
 - Check HTML and CSS with validators
+- Check speed and re
 */
