@@ -698,8 +698,8 @@ p {
 }
 
 /********** #DECORATIONS **********/
+
 .decorations {
-  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -941,9 +941,10 @@ p {
 }
 
 /********** #STATS-BLOCK **********/
-
 .stats-block .block__bg {
   position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .stats-block .block__content {
@@ -973,13 +974,135 @@ p {
   }
 }
 
+.stats-block__decorations {
+  position: relative;
+}
+
+.stats-block__decorations .decorations__item {
+  position: absolute;
+  width: calc(42px + 10.8vw);
+  height: calc(42px + 10.8vw);
+}
+
+.stats-block__decorations .decorations__garlic {
+  top: 76%;
+  right: 6%;
+}
+.stats-block__decorations .decorations__leaf {
+  transform: none;
+  top: 34%;
+  left: 9%;
+}
+.stats-block__decorations .decorations__peppers {
+  transform: none;
+  top: 13.5%;
+  right: 7%;
+  left: auto;
+}
+
+.stats-block__decorations .decorations__tomato {
+  left: 3%;
+  bottom: 0%;
+}
+
+.stats-block__decorations .decorations__tomato1,
+.stats-block__decorations .decorations__tomato2,
+.stats-block__decorations .decorations__tomato3,
+.stats-block__decorations .decorations__tomato4 {
+  width: calc(24px + 1.5vw);
+  height: calc(24px + 1.5vw);
+}
+
+.stats-block__decorations .decorations__tomato1 {
+  top: 3%;
+  left: 10%;
+}
+.stats-block__decorations .decorations__tomato2 {
+  top: 95%;
+  left: 85%;
+}
+.stats-block__decorations .decorations__tomato3 {
+  top: 60%;
+  left: 10%;
+}
+.stats-block__decorations .decorations__tomato4 {
+  top: 51%;
+  left: 85%;
+}
+
+@media screen and (min-width: 1024px) {
+  .stats-block__decorations .decorations__item {
+    width: calc(28px + 7.2vw);
+    height: calc(28px + 7.2vw);
+  }
+
+  .stats-block__decorations .decorations__garlic {
+    top: 76%;
+    right: 6%;
+  }
+  .stats-block__decorations .decorations__leaf {
+    transform: none;
+    top: 30%;
+    left: 7%;
+  }
+  .stats-block__decorations .decorations__peppers {
+    transform: none;
+    top: 13.5%;
+    right: 7%;
+    left: auto;
+  }
+
+  .stats-block__decorations .decorations__tomato {
+    left: 15%;
+    bottom: 0%;
+    top: auto;
+  }
+
+  .stats-block__decorations .decorations__tomato1,
+  .stats-block__decorations .decorations__tomato2,
+  .stats-block__decorations .decorations__tomato3,
+  .stats-block__decorations .decorations__tomato4 {
+    width: calc(16px + 1vw);
+    height: calc(16px + 1vw);
+  }
+
+  .stats-block__decorations .decorations__tomato1 {
+    top: 40%;
+    left: 30%;
+  }
+  .stats-block__decorations .decorations__tomato2 {
+    top: 85%;
+    left: 70%;
+  }
+  .stats-block__decorations .decorations__tomato3 {
+    top: 90%;
+    left: 40%;
+  }
+  .stats-block__decorations .decorations__tomato4 {
+    top: 45%;
+    left: 75%;
+  }
+}
+
 /********** #ORIENTAL-BLOCK **********/
+body {
+  /* background-color: var(--primary-color); */
+}
+
+.stats-block {
+  /* margin-top: 10rem; */
+  /* border-top: 1px solid red; */
+}
+
+.oriental-block {
+  height: fit-content;
+}
 
 .oriental-block__box1 {
-  height: calc(93px + 40.9vw);
+  height: calc(93px + 41vw);
 }
 .oriental-block__box2 {
-  height: calc(141px + 6.4vw);
+  height: calc(141px + 6.5vw);
 }
 
 .oriental-block__svg {
@@ -1007,7 +1130,6 @@ p {
 
 @media screen and (min-width: 1024px) {
   .oriental-block {
-    height: 55vw;
   }
 
   .oriental-block .block__content {
@@ -1069,10 +1191,6 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  .grill-block {
-    height: 55vw;
-  }
-
   .grill-block .block__content {
     display: flex;
     flex-direction: row;
@@ -1110,29 +1228,89 @@ p {
 }
 
 /********** #SUBSCRIBE-BLOCK **********/
-
 .subscribe-block {
-  height: 100vw;
+  height: fit-content;
+  padding: 20vw 0;
+}
+
+.subscribe-block .block__bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .subscribe-block .block__content {
+  position: static;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20vw;
+}
+
+.subscribe-block__layer {
+  width: 100%;
 }
 
 .subscribe-block .info {
   width: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 5vw;
 }
 
 @media screen and (min-width: 1024px) {
-  .subscribe-block {
-    height: 100vh;
-  }
   .subscribe-block .info {
-    margin-bottom: 10vh;
+    margin-bottom: 10vw;
   }
+}
+
+.subscribe-block__decorations .decorations__item {
+  position: absolute;
+  width: calc(28px + 7.2vw);
+  height: calc(28px + 7.2vw);
+}
+
+.subscribe-block__decorations .decorations__garlic {
+  top: 75%;
+  left: 70%;
+}
+.subscribe-block__decorations .decorations__leaf {
+  transform: scaleY(-1);
+  top: 18%;
+  left: 10%;
+}
+.subscribe-block__decorations .decorations__peppers {
+  transform: scaleY(-1);
+  top: 10vw;
+  left: 75vw;
+}
+
+.subscribe-block__decorations .decorations__tomato {
+  left: 25vw;
+  bottom: 20vw;
+}
+
+.subscribe-block__decorations .decorations__tomato1,
+.subscribe-block__decorations .decorations__tomato2,
+.subscribe-block__decorations .decorations__tomato3,
+.subscribe-block__decorations .decorations__tomato4 {
+  width: calc(16px + 1vw);
+  height: calc(16px + 1vw);
+}
+
+.subscribe-block__decorations .decorations__tomato1 {
+  top: 38%;
+  left: 8%;
+}
+.subscribe-block__decorations .decorations__tomato2 {
+  top: 80%;
+  left: 50%;
+}
+.subscribe-block__decorations .decorations__tomato3 {
+  top: 90%;
+  left: 15%;
+}
+.subscribe-block__decorations .decorations__tomato4 {
+  top: 30vw;
+  left: 90vw;
 }
 
 /********** #FOOTER-BLOCK **********/
@@ -1156,6 +1334,9 @@ p {
 
 .footer-block__info {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-block__info .info__title {
@@ -1210,6 +1391,7 @@ p {
 
   .footer-block__info {
     margin-right: 5vw;
+    display: block;
     text-align: start;
   }
 
@@ -1218,6 +1400,7 @@ p {
     flex-direction: row;
     align-items: flex-start;
     width: fit-content;
+    white-space: nowrap;
   }
   .footer-block__links .list__title {
     margin: 0;
@@ -1229,3 +1412,8 @@ p {
     align-items: flex-start;
   }
 }
+
+/*TODO:
+- Fix menu
+- Check HTML and CSS with validators
+*/
