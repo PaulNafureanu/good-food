@@ -738,8 +738,8 @@ p {
   }
   .decorations__peppers {
     transform: scaleX(-1);
-    top: 8%;
-    left: 75%;
+    top: 0%;
+    left: 80%;
   }
 
   .decorations__tomato {
@@ -843,7 +843,7 @@ p {
 .hero__content .callout {
   position: absolute;
   margin-right: 5vw;
-  bottom: 5vw;
+  bottom: calc(5vw + 8px);
   left: 7vw;
   z-index: 1;
 }
@@ -887,7 +887,7 @@ p {
   .hero__content .callout {
     bottom: auto;
     left: 55%;
-    top: 23%;
+    top: 13%;
   }
 }
 
@@ -1111,6 +1111,10 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  .oriental-block__svg {
+    height: 135vw;
+  }
+
   .oriental-block .block__content {
     display: flex;
     flex-direction: row;
@@ -1171,6 +1175,10 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  .grill-block__svg {
+    height: 135vw;
+  }
+
   .grill-block .block__content {
     display: flex;
     flex-direction: row;
@@ -1395,7 +1403,3 @@ p {
     align-items: flex-start;
   }
 }
-
-/*TODO:
-- Add animations.
-*/

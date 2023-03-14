@@ -19,6 +19,7 @@
     <title>Good Food</title>
     <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <section class="block block--dark hero">
@@ -136,7 +137,7 @@
             </div>
           </div>
         </div>
-        <div class="callout">
+        <div class="callout" data-aos="fade-left">
           <div class="info">
             <h1 class="info__title">Hello there!</h1>
             <p class="info__text callout__text">
@@ -148,7 +149,7 @@
             Order Now
           </button>
         </div>
-        <div class="decorations hero__decorations">
+        <div class="decorations hero__decorations" data-aos="fade-left">
           <img
             class="svg svg--golden decorations__item decorations__garlic"
             src="./img/svg/garlic1.svg"
@@ -193,7 +194,7 @@
     <section class="block block--white dish-block">
       <div class="block__bg"></div>
       <div class="block__content">
-        <div class="info">
+        <div class="info" data-aos="fade-up">
           <h2 class="info__title info__title--centered info__title--secondary">
             Best Sellers
           </h2>
@@ -203,7 +204,7 @@
           </p>
         </div>
         <div class="dish-block__options">
-          <div class="card card--small">
+          <div class="card card--small" data-aos="fade-up">
             <picture>
               <source
                 type="image/webp"
@@ -248,7 +249,7 @@
               </p>
             </div>
           </div>
-          <div class="card card--small">
+          <div class="card card--small" data-aos="fade-up">
             <picture>
               <source
                 type="image/webp"
@@ -293,7 +294,7 @@
               </p>
             </div>
           </div>
-          <div class="card card--small">
+          <div class="card card--small" data-aos="fade-up">
             <picture>
               <source
                 type="image/webp"
@@ -351,7 +352,7 @@
         <div class="box box--dark oriental-block__box2"></div>
       </div>
       <div class="block__content">
-        <picture>
+        <picture data-aos="fade-up-right" data-aos-duration="1500">
           <source
             type="image/webp"
             srcset="
@@ -442,7 +443,7 @@
         </div>
       </div>
       <div class="block__content">
-        <div class="info">
+        <div class="info" data-aos="fade-up" data-aos-duration="1500">
           <h2 class="info__title info__text--centered">Statistics</h2>
           <p class="info__text info__text--centered">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
@@ -450,19 +451,19 @@
           </p>
         </div>
         <div class="stats-block__figures">
-          <div class="stats">
+          <div class="stats" data-aos="fade-up">
             <div class="stats__number">123</div>
             <div class="stats__type">Outlets</div>
           </div>
-          <div class="stats">
+          <div class="stats" data-aos="fade-up">
             <div class="stats__number">100</div>
             <div class="stats__type">Chefs</div>
           </div>
-          <div class="stats">
+          <div class="stats" data-aos="fade-up">
             <div class="stats__number">300</div>
             <div class="stats__type">Menus</div>
           </div>
-          <div class="stats">
+          <div class="stats" data-aos="fade-up">
             <div class="stats__number">50</div>
             <div class="stats__type">Countries</div>
           </div>
@@ -479,7 +480,7 @@
         <div class="box box--dark grill-block__box2"></div>
       </div>
       <div class="block__content">
-        <picture>
+        <picture data-aos="fade-down-left" data-aos-duration="1500">
           <source
             type="image/webp"
             srcset="
@@ -574,10 +575,14 @@
           <div class="info">
             <h2
               class="info__title info__title--centered info__title--secondary"
+              data-aos="zoom-out-up"
             >
               Subscribe
             </h2>
-            <p class="info__text info__text--centered info__text--secondary">
+            <p
+              class="info__text info__text--centered info__text--secondary"
+              data-aos="fade-up"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
               ex molestias impedit laudantium assumenda!
             </p>
@@ -586,6 +591,7 @@
             id="inputGroupOrder"
             onclick="styleInputGroupOnFocus('inputGroupOrder','inputOrder','sendOrder')"
             class="input-group"
+            data-aos="zoom-out-up"
           >
             <input
               id="inputOrder"
@@ -616,7 +622,10 @@
                   perspiciatis nostrum.
                 </p>
               </div>
-              <div class="footer-block__social-media-links">
+              <div
+                class="footer-block__social-media-links"
+                data-aos="zoom-out-right"
+              >
                 <a href="#" class="link"
                   ><img
                     class="icon icon--white"
@@ -695,5 +704,9 @@
       </section>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
