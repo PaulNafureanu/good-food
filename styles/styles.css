@@ -807,6 +807,9 @@ p {
 }
 
 /********** #HERO **********/
+.hero {
+  height: calc(25rem + 67vw);
+}
 
 .hero .header {
   position: fixed;
@@ -844,6 +847,9 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  .hero {
+    height: 67vw;
+  }
   .hero .header {
     background: linear-gradient(var(--transparent-primary-color), transparent);
     box-shadow: none;
