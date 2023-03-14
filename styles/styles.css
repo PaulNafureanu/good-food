@@ -1,25 +1,12 @@
+@import "./normalize.css";
+
 @font-face {
   font-family: "Grandhotel";
   src: url("./../fonts/grandhotel-regular.woff2") format("woff2"),
     url("./../fonts/grandhotel-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./../fonts//roboto-light.woff2") format("woff2"),
-    url("./../fonts//roboto-light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./../fonts/roboto-medium.woff2") format("woff2"),
-    url("./../fonts/roboto-medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-display: fallback;
 }
 
 :root {
@@ -69,15 +56,10 @@ html {
 }
 
 body {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: lighter;
-  font-size: calc(13px + 1vw);
-  /*Font size is not set to a rem unit because the client settings (browser font size) can affect the layout too much.*/
-  /*For that reason, font size is calculated as a smooth transition between the mobile layout and desktop layout as follow:
-    - for a width of 320px, font-size is set to 16px (13px + 1% of 320px)
-    - for a width of 1023px, font-size is set to approximate the desktop font-size (13px + 1% of 1023px ~= 2.3% of 1024px)
-  Computing position is done similarly using a system with 2 linear equation and 2 unknowns.
-    */
+  font-size: calc(8px + 2.3vw);
   color: var(--body-text-color);
   background-color: var(--secondary-color-darker);
   line-height: 1.5;
@@ -85,27 +67,23 @@ body {
 }
 
 h1 {
-  font-size: calc(33px + 7vw);
+  font-size: calc(27px + 5.7vw);
 }
 
 h2 {
-  font-size: calc(19px + 5vw);
+  font-size: calc(20px + 5.1vw);
 }
 
 h3 {
-  font-size: 3.5rem;
-}
-
-h4 {
-  /* font-size: 2.8rem; */
-  font-size: calc(32px + 0.9vw);
+  font-size: calc(21px + 1.4vw);
 }
 
 h1,
 h2,
-h3,
-h4 {
-  font-family: Grandhotel, cursive;
+h3 {
+  font-family: Grandhotel, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   color: var(--heading-color);
   font-weight: normal;
   margin: 0;
@@ -117,34 +95,6 @@ p {
   margin: 0;
   padding: 0;
   max-width: 50ch;
-}
-
-@media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 10.2vw;
-  }
-
-  h3 {
-    font-size: 5rem;
-  }
-
-  h4 {
-    font-size: 3.5rem;
-  }
-
-  body {
-    font-size: 2.3vw;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  h3 {
-    font-size: 6rem;
-  }
-
-  h4 {
-    font-size: 4rem;
-  }
 }
 
 .prevent-select {
@@ -318,7 +268,7 @@ p {
 }
 
 .card .info__text {
-  font-size: calc(15px + 0.5vw);
+  font-size: calc(15px + 0.7vw);
 }
 
 .card--small .info__text {
@@ -330,7 +280,7 @@ p {
     max-width: calc(172px + 22.3vw);
   }
   .card--small .info__text {
-    max-width: calc(29px + 16.7vw);
+    max-width: calc(29px + 20.7vw);
   }
 }
 
@@ -460,7 +410,8 @@ p {
 
 /********** #ICON **********/
 .icon {
-  height: 3.8rem;
+  width: 38px;
+  height: 38px;
   border-radius: 3px;
   border: 2px solid transparent;
   display: flex;
@@ -498,13 +449,15 @@ p {
 @media screen and (min-width: 1024px) {
   .icon {
     border-radius: 5px;
-    height: 4rem;
+    height: 40px;
+    width: 40px;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .icon {
-    height: 5rem;
+    height: 50px;
+    width: 50px;
   }
 }
 
@@ -735,11 +688,11 @@ p {
 .decorations__leaf {
   transform: scaleX(-1);
   top: calc(56.9vw + 118px);
-  left: calc(-10px - 3vw);
+  left: calc(-10px - 4vw);
 }
 .decorations__peppers {
   transform: scaleX(-1);
-  top: 50vw;
+  top: 45vw;
   left: 25vw;
 }
 
@@ -769,14 +722,14 @@ p {
   left: 0%;
 }
 .decorations__tomato4 {
-  top: calc(67px + 54vw);
-  left: calc(113px + 42.6vw);
+  top: calc(60px + 54vw);
+  left: calc(125px + 42.6vw);
 }
 
 @media screen and (min-width: 1024px) {
   .decorations__garlic {
     top: 60%;
-    left: 90%;
+    left: 93%;
   }
   .decorations__leaf {
     transform: scaleX(-1);
@@ -791,7 +744,7 @@ p {
 
   .decorations__tomato {
     left: 55%;
-    top: 77%;
+    top: 90%;
   }
 
   .decorations__tomato1,
@@ -804,7 +757,8 @@ p {
 
   .decorations__tomato1 {
     top: 43%;
-    left: 99%;
+    right: -4%;
+    left: auto;
   }
   .decorations__tomato2 {
     top: 15%;
@@ -815,8 +769,8 @@ p {
     left: 45%;
   }
   .decorations__tomato4 {
-    top: 80%;
-    left: 80%;
+    top: 90%;
+    left: 90%;
   }
 }
 
@@ -853,6 +807,7 @@ p {
 }
 
 /********** #HERO **********/
+
 .hero .header {
   position: fixed;
   background: var(--transparent-secondary-color);
@@ -892,7 +847,7 @@ p {
   .hero .header {
     background: linear-gradient(var(--transparent-primary-color), transparent);
     box-shadow: none;
-    font-size: 1.6vw;
+    font-size: 2vw;
     font-weight: 400;
   }
   .hero .menu {
@@ -900,7 +855,8 @@ p {
   }
 
   .hero__picture {
-    transform: translate(-10%) scale(-1);
+    width: 60vw;
+    transform: translate(-15%) scale(-1);
   }
 
   .hero__svg {
@@ -1011,18 +967,18 @@ p {
 }
 
 .stats-block__decorations .decorations__garlic {
-  top: 76%;
+  top: 75%;
   right: 6%;
 }
 .stats-block__decorations .decorations__leaf {
   transform: none;
-  top: 34%;
-  left: 9%;
+  top: 32%;
+  left: 8%;
 }
 .stats-block__decorations .decorations__peppers {
   transform: none;
-  top: 13.5%;
-  right: 7%;
+  top: 12%;
+  right: 5%;
   left: auto;
 }
 
@@ -1040,16 +996,16 @@ p {
 }
 
 .stats-block__decorations .decorations__tomato1 {
-  top: 3%;
-  left: 10%;
+  top: 2.5%;
+  left: 8%;
 }
 .stats-block__decorations .decorations__tomato2 {
   top: 95%;
   left: 85%;
 }
 .stats-block__decorations .decorations__tomato3 {
-  top: 60%;
-  left: 10%;
+  top: 58%;
+  left: 8%;
 }
 .stats-block__decorations .decorations__tomato4 {
   top: 51%;
@@ -1068,12 +1024,12 @@ p {
   }
   .stats-block__decorations .decorations__leaf {
     transform: none;
-    top: 30%;
-    left: 7%;
+    top: 32%;
+    left: 5%;
   }
   .stats-block__decorations .decorations__peppers {
     transform: none;
-    top: 13.5%;
+    top: 5%;
     right: 7%;
     left: auto;
   }
@@ -1154,12 +1110,12 @@ p {
 
   .oriental-block .picture {
     margin-left: 0;
-    margin-top: calc(31.8vw - 226px);
+    margin-top: calc(38.8vw - 226px);
   }
 
   .oriental-block .callout {
-    margin-left: 10vw;
-    margin-top: calc(31.8vw - 226px);
+    margin-left: 6vw;
+    margin-top: calc(40.8vw - 226px);
     margin-bottom: 0;
   }
 }
@@ -1194,7 +1150,7 @@ p {
 .grill-block .picture {
   margin-left: 40vw;
   margin-top: 5vw;
-  object-fit: none;
+  object-fit: cover;
   object-position: 75%;
 }
 
@@ -1216,7 +1172,7 @@ p {
   }
 
   .grill-block .callout {
-    margin-left: 10vw;
+    margin-left: 6vw;
   }
 }
 
@@ -1250,6 +1206,7 @@ p {
   height: 100%;
   width: 100%;
 }
+
 .subscribe-block .block__content {
   z-index: 1;
   position: static;
@@ -1287,8 +1244,8 @@ p {
 }
 .subscribe-block__decorations .decorations__leaf {
   transform: scaleY(-1);
-  top: 18%;
-  left: 10%;
+  top: 16%;
+  left: 8%;
 }
 .subscribe-block__decorations .decorations__peppers {
   transform: scaleY(-1);
@@ -1310,8 +1267,8 @@ p {
 }
 
 .subscribe-block__decorations .decorations__tomato1 {
-  top: 38%;
-  left: 8%;
+  top: 45%;
+  left: 6%;
 }
 .subscribe-block__decorations .decorations__tomato2 {
   top: 80%;
@@ -1322,7 +1279,7 @@ p {
   left: 15%;
 }
 .subscribe-block__decorations .decorations__tomato4 {
-  top: 30vw;
+  top: 25vw;
   left: 90vw;
 }
 
@@ -1330,7 +1287,7 @@ p {
 
 .footer-block {
   height: fit-content;
-  font-size: calc(13px + 1.1vw);
+  font-size: calc(15px + 0.7vw);
   padding: 5% 0;
 }
 
@@ -1353,11 +1310,12 @@ p {
 }
 
 .footer-block__info .info__title {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
-  font-size: calc(13px + 1.7vw);
+  font-size: calc(21px + 1.4vw);
   color: white;
-  margin-bottom: 1vw;
+  margin: 1vw 0;
 }
 .footer-block__links {
   display: flex;
@@ -1373,9 +1331,8 @@ p {
 }
 
 .footer-block__links .list__title {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: calc(13px + 1.7vw);
-  font-weight: 400;
+  font-size: calc(21px + 1.4vw);
+  font-weight: normal;
   color: white;
   margin: 6vw 0 1vw;
 }
@@ -1429,18 +1386,5 @@ p {
 
 /*TODO:
 - Check speed and accessibility.
-- Performance:
-  - Properly size the images (see the round images and hero img)
-  - Set font-display to ensure the display of the text on the screen.
-  - The icons don't have explicit width and height sizes (see search and logo)
-  - Avoid huge network payloads
-  More on performance:
-  - Avoid chaining critical requests
-  - Largest Containtful paint element (see hero and optimize it)
-  - Layout shifts (dish blocks, hero decorations, svg bg1 for hero, hero callout, leaf svg)
-
-- Fix the position of the svg bg1 after building and deployment.
-- Fix the selection of text on the menu and buttons.
-- Fix the leaf svg layout on mobile.
 - Add animations.
 */

@@ -18,7 +18,6 @@
     <meta property="og:url" content="https://paulnf-goodfood.netlify.app/" />
     <title>Good Food</title>
     <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
@@ -26,6 +25,7 @@
       <div class="block__bg hero__bg">
         <picture>
           <source
+            media="(max-width: 1023px)"
             type="image/webp"
             srcset="
               img/webp/hero.webp     480w,
@@ -34,14 +34,10 @@
               img/webp/hero@4x.webp 1920w,
               img/webp/hero@5x.webp 2400w
             "
-            sizes="
-            (max-width: 480px) 480px,
-            (max-width: 960px) 960px,
-            (max-width: 1440px) 1440px,
-            (max-width: 1920px) 1920px,
-            2400px"
+            sizes="100vw"
           />
           <source
+            media="(max-width: 1023px)"
             type="image/jpg"
             srcset="
               img/jpg/hero.jpg     480w,
@@ -50,13 +46,29 @@
               img/jpg/hero@4x.jpg 1920w,
               img/jpg/hero@5x.jpg 2400w
             "
-            sizes="
-            (max-width: 480px) 480px,
-            (max-width: 960px) 960px,
-            (max-width: 1440px) 1440px,
-            (max-width: 1920px) 1920px,
-            2400px"
+            sizes="100vw"
           />
+          <source
+            media="(min-width: 1024px)"
+            type="image/webp"
+            srcset="
+              img/webp/herohalf@3x.webp 864w,
+              img/webp/herohalf@4x.webp 1152,
+              img/webp/herohalf@5x.webp 1440
+            "
+            sizes="60vw"
+          />
+          <source
+            media="(min-width: 1024px)"
+            type="image/png"
+            srcset="
+              img/png/herohalf@3x.png 864w,
+              img/png/herohalf@4x.png 1152,
+              img/png/herohalf@5x.png 1440
+            "
+            sizes="60vw"
+          />
+
           <img
             class="picture hero__picture"
             src="img/jpg/hero@3x.jpg"
@@ -431,7 +443,7 @@
       </div>
       <div class="block__content">
         <div class="info">
-          <h1 class="info__title info__text--centered">Statistics</h1>
+          <h2 class="info__title info__text--centered">Statistics</h2>
           <p class="info__text info__text--centered">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
             cum laborum perspiciatis corrupti dignissimos.
@@ -560,11 +572,11 @@
       <div class="block__content">
         <div class="subscribe-block__layer">
           <div class="info">
-            <h1
+            <h2
               class="info__title info__title--centered info__title--secondary"
             >
               Subscribe
-            </h1>
+            </h2>
             <p class="info__text info__text--centered info__text--secondary">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
               ex molestias impedit laudantium assumenda!
