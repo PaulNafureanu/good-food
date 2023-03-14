@@ -43,6 +43,24 @@
   box-sizing: border-box;
 }
 
+/********** #SCROLLBAR **********/
+
+::-webkit-scrollbar {
+  min-width: 10px;
+  width: 1vw;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5vw;
+  transition: var(--transition-time);
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /********** #TYPOGRAPHY **********/
 
 html {
@@ -129,6 +147,12 @@ p {
   }
 }
 
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /********** #BUTTONS **********/
 .btn {
   border-radius: 3px;
@@ -142,6 +166,10 @@ p {
   transition: var(--transition-time);
   width: fit-content;
   height: fit-content;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn:hover {
@@ -430,28 +458,6 @@ p {
   margin-left: 1vw;
 }
 
-@media screen and (min-width: 1024px) {
-  /* .callout__btn {
-    margin-top: 2.5rem;
-    margin-left: 1.5rem;
-  }
-
-  .callout__text {
-    margin-left: 1.5rem;
-  } */
-}
-
-@media screen and (min-width: 1920px) {
-  /* .callout__btn {
-    margin-top: 4.5rem;
-    margin-left: 3rem;
-  }
-
-  .callout__text {
-    margin-left: 3rem;
-  } */
-}
-
 /********** #ICON **********/
 .icon {
   height: 3.8rem;
@@ -460,6 +466,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .icon:hover {
@@ -655,6 +665,10 @@ p {
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header .menu {
@@ -703,6 +717,9 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .decorations__item {
@@ -868,6 +885,7 @@ p {
   margin-right: 5vw;
   bottom: 5vw;
   left: 7vw;
+  z-index: 1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -960,6 +978,7 @@ p {
   align-items: center;
   position: static;
   margin: 5% 0;
+  z-index: 1;
 }
 
 .stats-block__figures {
@@ -1410,7 +1429,6 @@ p {
 
 /*TODO:
 - Check speed and accessibility.
-- SEO: Add meta description for the document and a favicon
 - Accessibility: Order heading (see h4)
 - Performance:
   - Properly size the images (see the round images and hero img)
