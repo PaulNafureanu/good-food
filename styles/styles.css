@@ -809,6 +809,7 @@ p {
 /********** #HERO **********/
 .hero {
   height: calc(25rem + 67vw);
+  width: 100%;
 }
 
 .hero .header {
