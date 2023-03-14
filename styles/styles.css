@@ -1232,6 +1232,7 @@ p {
   width: 100%;
 }
 .subscribe-block .block__content {
+  z-index: 1;
   position: static;
   display: flex;
   flex-direction: column;
@@ -1355,6 +1356,7 @@ p {
 .footer-block__links .list__title {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: calc(13px + 1.7vw);
+  font-weight: 400;
   color: white;
   margin: 6vw 0 1vw;
 }
@@ -1407,6 +1409,5 @@ p {
 }
 
 /*TODO:
-- Check HTML and CSS with validators
-- Check speed and re
+- Check speed and accessibility
 */
