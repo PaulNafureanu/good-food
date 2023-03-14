@@ -1409,5 +1409,21 @@ p {
 }
 
 /*TODO:
-- Check speed and accessibility
+- Check speed and accessibility.
+- SEO: Add meta description for the document and a favicon
+- Accessibility: Order heading (see h4)
+- Performance:
+  - Properly size the images (see the round images and hero img)
+  - Set font-display to ensure the display of the text on the screen.
+  - The icons don't have explicit width and height sizes (see search and logo)
+  - Avoid huge network payloads
+  More on performance:
+  - Avoid chaining critical requests
+  - Largest Containtful paint element (see hero and optimize it)
+  - Layout shifts (dish blocks, hero decorations, svg bg1 for hero, hero callout, leaf svg)
+
+- Fix the position of the svg bg1 after building and deployment.
+- Fix the selection of text on the menu and buttons.
+- Fix the leaf svg layout on mobile.
+- Add animations.
 */
